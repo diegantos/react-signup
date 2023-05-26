@@ -11,15 +11,30 @@ body{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: fit-content;
     min-height: 100vh;
     background-color: rgb(38, 99, 99);
     text-align: center;
     & h2{
         font-size: 3em;
+        margin: 0 0 0.5em;
     }
-    &-form{
-        background-color: aquamarine;
+}
+input{
+    background-color: #dddffe;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 0 0 1em;
+    &::placeholder{
+        border: none;
     }
+}
+button{
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: #24285b;
+    color: #dddffe;
+    border: none;
 }

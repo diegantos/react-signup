@@ -6,11 +6,10 @@ export const Signup = () => {
       <img src="/src/assets/logo.svg" alt="logo" />
       <h2>Sign up</h2>
 
-      <form action="" className="Login-form">
+      <form action="">
         <div className="Username">
           <input
             type="email"
-            autoComplete="on"
             className="Username-input"
             placeholder="Username"
           />
@@ -20,7 +19,7 @@ export const Signup = () => {
 
         <div className="Bars"></div>
         <div className="Strength"></div>
-        <button className="Login-button">JOIN NOW</button>
+        <button>JOIN NOW</button>
       </form>
     </div>
   );
