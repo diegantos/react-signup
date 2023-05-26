@@ -3,13 +3,14 @@ import "./Signup.scss";
 export const Signup = () => {
   return (
     <div className="Login">
-      <img src="./assets/logo.svg" alt="" />
+      <img src="/src/assets/logo.svg" alt="logo" />
       <h2>Sign up</h2>
 
-      <form action="">
+      <form action="" className="Login-form">
         <div className="Username">
           <input
-            type="text"
+            type="email"
+            autoComplete="on"
             className="Username-input"
             placeholder="Username"
           />
