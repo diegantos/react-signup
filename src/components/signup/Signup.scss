@@ -44,6 +44,7 @@ button{
     border: none;
     font-size: 1em;
     font-weight: 600;
+    cursor: pointer;
 }
 .Password{
     position: relative;
@@ -74,15 +75,26 @@ button{
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 1em;
     opacity: 1;
-    &-weak{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
+        transition: all 0.2s ease;
+    }
+    &.weak::after{
         width: 33.33%;
         background-color: red;
     }
-    &-medium{
+    &.medium::after{
         width: 66.66%;
         background-color: yellow;
     }
-    &-strong{
+    &.strong::after{
         width: 100%;
         background-color: greenyellow;
     }
