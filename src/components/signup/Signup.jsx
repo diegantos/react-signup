@@ -39,7 +39,7 @@ export const Signup = () => {
         </div>
 
         <div className="Bars"></div>
-        <div className="Strength"></div>
+        <div className="Strength">strong password</div>
         <button>JOIN NOW</button>
       </form>
     </div>
