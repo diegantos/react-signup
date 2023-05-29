@@ -22,8 +22,8 @@ body{
     }
 }
 input{
-    background-color: #dddffe;
-    padding: 0.5em;
+    background-color: #eeefff;
+    padding: 0.8em;
     border-radius: 0.5em;
     margin: 0 0 1em;
     &::placeholder{
@@ -32,9 +32,34 @@ input{
 }
 button{
     width: 100%;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 0.5em;
     background-color: #24285b;
     color: #dddffe;
     border: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+.Password{
+    position: relative;
+}
+.Spinner {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #24285b;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    animation: spin 0.7s linear infinite;
+    position: absolute;
+    top: calc( 50% - 1.15em ); // 1.5 height + 0.8 padding input
+    right: 0.5em;
+  }
+  
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

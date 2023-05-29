@@ -7,15 +7,21 @@ export const Signup = () => {
       <h2>Sign up</h2>
 
       <form action="">
-        <div className="Username">
-          <input
-            type="email"
-            className="Username-input"
-            placeholder="Username"
-          />
-          <div className="Spinner"></div>
+        
+        <input
+          type="email"
+          className="Username-input"
+          placeholder="Username"
+        />
+
+        <div className="Password">
+          <input 
+            type="password"
+            name="password"
+            placeholder="Password" />
+            <div className="Spinner"></div>
+
         </div>
-        <input type="password" name="password" placeholder="Password" />
 
         <div className="Bars"></div>
         <div className="Strength"></div>
