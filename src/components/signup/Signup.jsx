@@ -38,7 +38,7 @@ export const Signup = () => {
             { loading && <Spinner /> }
         </div>
 
-        <div className="Bars"></div>
+        <div className="Bars Bars-strong"></div>
         <div className="Strength">strong password</div>
         <button>JOIN NOW</button>
       </form>
