@@ -10,6 +10,12 @@ export const Signup = () => {
     setLoading(value !== '')
   }
 
+  const Spinner = () => {
+    return (
+      <div className="Spinner"></div>
+    )
+  }
+
   return (
     <div className="Login">
       <img src="/src/assets/logo.svg" alt="logo" />
@@ -29,7 +35,7 @@ export const Signup = () => {
             name="password"
             placeholder="Password" 
             onChange={handleLoading} />
-            { loading && <div className="Spinner"></div> }
+            { loading && <Spinner /> }
         </div>
 
         <div className="Bars"></div>
