@@ -1,6 +1,15 @@
+import { useState } from "react";
 import "./Signup.scss";
 
 export const Signup = () => {
+
+  const [ loading, setLoading ] = useState(false)
+
+  const handleLoading = (event) => {
+    const value = event.target.value
+    setLoading(value !== '')
+  }
+
   return (
     <div className="Login">
       <img src="/src/assets/logo.svg" alt="logo" />
@@ -18,9 +27,9 @@ export const Signup = () => {
           <input 
             type="password"
             name="password"
-            placeholder="Password" />
-            <div className="Spinner"></div>
-
+            placeholder="Password" 
+            onChange={handleLoading} />
+            { loading && <div className="Spinner"></div> }
         </div>
 
         <div className="Bars"></div>
