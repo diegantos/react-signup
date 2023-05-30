@@ -41,7 +41,7 @@ export const Signup = () => {
   }
 
   const handleChange = (event) => {
-    handleLoading
+    handleLoading(event)
     handleStrength(event.target.value)
   }
 
