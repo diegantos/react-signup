@@ -29,9 +29,15 @@ input{
     &:first-child{
         margin: 0 0 1.2em 0;
     }
+    &::placeholder{
+        color: #999;
+    }
     &:focus{
         // outline: none;
         outline-color: #24285b;
+        &::placeholder{
+            color: #ccc;
+        }
     }
 }
 button{
