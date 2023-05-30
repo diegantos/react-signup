@@ -6,18 +6,22 @@ export const Signup = () => {
   const [ loading, setLoading ] = useState(false)
   const [ strength, setStrength ] = useState('')
 
+  const strengthLabel = ['weak', 'medium', 'strong']
+
   const handleLoading = (event) => {
     const value = event.target.value
     setLoading(value !== '')
   }
 
-  const handleStrength = (event) => {
+  const handleStrength = (password) => {
     let upper = false,
         lower = false,
         number = false
     let strengthIndicator = -1
 
-    event.forEach((char) => {
+    console.log(password)
+
+    password.split('').forEach((char) => {
       
       if (!upper && char.match(/[A-Z]/)){
         upper = true
@@ -33,8 +37,12 @@ export const Signup = () => {
       }
 
     })
-    setStrength(event.target.value)
-    console.log(strength)
+    setStrength(strengthLabel[strengthIndicator] ?? "")
+  }
+
+  const handleChange = (event) => {
+    handleLoading
+    handleStrength(event.target.value)
   }
 
   const Spinner = () => {
@@ -61,13 +69,13 @@ export const Signup = () => {
             type="password"
             name="password"
             placeholder="Password" 
-            onChange={handleLoading} />
+            onChange={handleChange} />
             { loading && <Spinner /> }
         </div>
 
         <div className={`Bars ${strength}`}></div>
-        <div className="Strength">strong password</div>
-        <button>JOIN NOW</button>
+        <div className="Strength">{strength} password</div>
+        <button type="submit">JOIN NOW</button>
       </form>
     </div>
   );

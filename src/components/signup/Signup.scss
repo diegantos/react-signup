@@ -30,9 +30,8 @@ input{
         margin: 0 0 1.2em 0;
     }
     &:focus{
-        outline: none;
-        border: 2px solid #68e1fd;
-        // border: 2px solid #24285b;
+        // outline: none;
+        outline-color: #24285b;
     }
 }
 button{
