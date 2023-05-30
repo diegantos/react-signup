@@ -73,8 +73,8 @@ export const Signup = () => {
             { loading && <Spinner /> }
         </div>
 
-        <div className={`Bars ${strength}`}></div>
-        <div className="Strength">{strength} password</div>
+        <div className={`Bars ${strength !== '' ? 'Active' : ''} ${strength}`}></div>
+        <div className="Strength">{strength && <>{strength} password</>}</div>
         <button type="submit">JOIN NOW</button>
       </form>
     </div>
