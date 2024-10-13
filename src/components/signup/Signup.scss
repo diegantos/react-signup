@@ -22,9 +22,10 @@ body{
     }
 }
 form{
-    width: 40%;
+    width: 50%;
 }
 input{
+    width: 100%;
     background-color: #eeefff;
     padding: 0.8em;
     border-radius: 0.5em;
@@ -56,6 +57,7 @@ button{
 }
 .Password{
     position: relative;
+    width: 100%;
 }
 .Spinner {
     border: 4px solid rgba(0, 0, 0, 0.2);
@@ -88,6 +90,7 @@ button{
     position: relative;
     &.Active{
         opacity: 1;
+        width: 100%;
     }
     &::after{
         content: '';

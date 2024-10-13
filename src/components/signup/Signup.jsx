@@ -9,11 +9,11 @@ export const Signup = () => {
 
   const strengthLabel = ['weak', 'medium', 'strong', 'great']
   const messageLabel = [
-    'Your password needed at least a mayus, minus, number and special character',
-    '2',
-    '3',
-    '4',
-  ]
+    "Your password must have at least one uppercase, lowercase, special character and number",
+    "Two more steps at least",
+    "Ok, you are close",
+    "Great password",
+  ];
 
   const handleLoading = (event) => {
     const value = event.target.value
@@ -88,7 +88,7 @@ export const Signup = () => {
 
         <div className={`Bars ${strength !== '' ? 'Active' : ''} ${strength}`}></div>
         <div className="Strength">{strength && <>{strength} password</>}</div>
-        <div className="InfoMessage">{infoMessage && <>{infoMessage} password</>}</div>
+        <div className="InfoMessage">{infoMessage && <>{infoMessage}</>}</div>
         <button type="submit">JOIN NOW</button>
       </form>
     </div>
