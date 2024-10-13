@@ -97,19 +97,24 @@ button{
         transition: all 0.4s ease;
     }
     &.weak::after{
-        width: 33.33%;
+        width: 25%;
         background-color: red;
     }
     &.medium::after{
-        width: 66.66%;
-        background-color: yellow;
+        width: 50%;
+        background-color: orange;
     }
     &.strong::after{
+        width: 75%;
+        background-color: yellow;
+    }
+    &.great::after{
         width: 100%;
         background-color: greenyellow;
     }
 }
 .Strength{
+    width: 100%;
     font-size: 0.8em;
     margin: 0 0 0.5em;
     color: white;
