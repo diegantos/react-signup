@@ -9,7 +9,7 @@ export const Signup = () => {
 
   const strengthLabel = ['weak', 'medium', 'strong', 'great']
   const messageLabel = [
-    "Your password must have at least one uppercase, lowercase, special character and number",
+    "One uppercase, lowercase, special character and number",
     "Two more steps at least",
     "Ok, you are close",
     "Great password",
@@ -43,7 +43,7 @@ export const Signup = () => {
         number = true
         strengthIndicator++
       }
-      if(!symbols && char.match(/[!@#$%^&*(),.?":{}|<>]/)){
+      if(!symbols && char.match(/[!@#$%^&*(),-/.?":{}|<>]/)){
         symbols = true
         strengthIndicator++
       }
@@ -87,7 +87,7 @@ export const Signup = () => {
         </div>
 
         <div className={`Bars ${strength !== '' ? 'Active' : ''} ${strength}`}></div>
-        <div className="Strength">{strength && <>{strength} password</>}</div>
+        {/* <div className="Strength">{strength && <>{strength} password</>}</div> */}
         <div className="InfoMessage">{infoMessage && <>{infoMessage}</>}</div>
         <button type="submit">JOIN NOW</button>
       </form>
